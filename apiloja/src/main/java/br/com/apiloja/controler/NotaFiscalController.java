@@ -20,8 +20,9 @@ import br.com.apiloja.modelo.Produto;
 import br.com.apiloja.repository.NotaFiscalRepository;
 import br.com.apiloja.repository.ProdutoRepository;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 10800)
+
 @RestController
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 10800)
 public class NotaFiscalController {
 
 	@Autowired
