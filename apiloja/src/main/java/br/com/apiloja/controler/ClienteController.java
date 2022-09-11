@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.apiloja.modelo.Cliente;
 import br.com.apiloja.repository.ClienteRepository;
 
-@RequestMapping(value ="/clientes")
+//@RequestMapping(value ="/clientes")
 @RestController
 @CrossOrigin(origins = "http://localhost:4200", maxAge = 10800)
 public class ClienteController {
@@ -28,23 +28,23 @@ public class ClienteController {
 		return clienteRepository.findAll();
 	}
 
-	@GetMapping("/{id}")
+	@GetMapping("/clientes/{id}")
 	public Cliente listarCodigo(@PathVariable Long id) {
 		return clienteRepository.findById(id).get();
 	}
 
-	@PostMapping("/novo")
+	@PostMapping("/clientes/novo")
 	public Cliente adicionar(@RequestBody Cliente cliente) {
 		System.out.println(cliente);
 		return clienteRepository.save(cliente);
 	}
 
-	@PutMapping("/altera")
+	@PutMapping("/clientes/altera")
 	public Cliente altera(@RequestBody Cliente cliente) {
 		return clienteRepository.save(cliente);
 	}
 
-	@DeleteMapping("/deleta/{id}")
+	@DeleteMapping("/clientes/deleta/{id}")
 	public void deletacliente(@PathVariable Long id) {
 		clienteRepository.deleteById(id);
 	 }

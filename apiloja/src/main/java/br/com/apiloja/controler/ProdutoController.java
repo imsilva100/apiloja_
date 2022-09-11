@@ -51,9 +51,9 @@ public class ProdutoController {
 		return produtoRepository.save(codigo);
 	}
 	
-	 @DeleteMapping("/deleta/{codigo}")
-	 public void deletacliente(@PathVariable Long codigo) {
-		 produtoRepository.deleteById(codigo);
+	 @DeleteMapping("/deleta/{id}")
+	 public void deletacliente(@PathVariable Long id) {
+		 produtoRepository.deleteById(id);
 	 }
 	 
 
